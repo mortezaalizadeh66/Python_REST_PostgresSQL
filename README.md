@@ -16,31 +16,47 @@ Install PostgresSQL
 
 
 postgres=# 
-ABORT                      COMMIT                     END                        LOCK                       REVOKE                     TRUNCATE
-ALTER                      COPY                       EXECUTE                    MOVE                       ROLLBACK                   UNLISTEN
-ANALYZE                    CREATE                     EXPLAIN                    NOTIFY                     SAVEPOINT                  UPDATE
-BEGIN                      DEALLOCATE                 FETCH                      PREPARE                    SECURITY LABEL             VACUUM
-CALL                       DECLARE                    GRANT                      REASSIGN                   SELECT                     VALUES
-CHECKPOINT                 DELETE FROM                IMPORT FOREIGN SCHEMA      REFRESH MATERIALIZED VIEW  SET                        WITH
-CLOSE                      DISCARD                    INSERT INTO                REINDEX                    SHOW                       
-CLUSTER                    DO                         LISTEN                     RELEASE                    START                      
-COMMENT                    DROP                       LOAD                       RESET                      TABLE                      
-postgres=# create 
-ACCESS METHOD         DOMAIN                GROUP                 POLICY                SEQUENCE              TEMP                  UNIQUE                
-AGGREGATE             EVENT TRIGGER         INDEX                 PROCEDURE             SERVER                TEMPORARY             UNLOGGED              
-CAST                  EXTENSION             LANGUAGE              PUBLICATION           STATISTICS            TEXT SEARCH           USER                  
-COLLATION             FOREIGN DATA WRAPPER  MATERIALIZED VIEW     ROLE                  SUBSCRIPTION          TRANSFORM             USER MAPPING FOR      
-CONVERSION            FOREIGN TABLE         OPERATOR              RULE                  TABLE                 TRIGGER               VIEW                  
-DATABASE              FUNCTION              OR REPLACE            SCHEMA                TABLESPACE            TYPE                  
-p
+
 
 
 First:
 
 -Create Database  : 
 
+postgres=# 
+ CREATE DATABASE postgres
 
 
 
--Create table : 
+-Create table :  public.your_table_name
+
+
+         CREATE TABLE your_table_name (
+           data json
+            );
+            
+            CREATE TABLE
+            
+
+- Run client in the new terminal and keep server terminal running, 
+
+
+Output:
+         /Users/morali/PycharmProjects/postgressql/venv/bin/python /Users/morali/PycharmProjects/postgressql/client.py 
+Success
+
+Process finished with exit code 0
+
+
+
+- example of Query: 
+
+
+         $ SELECT * FROM your_table_name WHERE data->>'age' = '35';
+          
+          
+          
+          # {"data": "Morteza", "age": 35, "email": "mortexa.A@example.com"}
+
+
 
