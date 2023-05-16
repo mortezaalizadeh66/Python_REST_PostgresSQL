@@ -42,9 +42,10 @@ postgres=#
 
 
 Output:
-            # /Users/morali/PycharmProjects/postgressql/venv/bin/python /Users/morali/PycharmProjects/postgressql/client.py 
-            Success
-            Process finished with exit code 0
+
+            #  /Users/morali/PycharmProjects/postgressql/venv/bin/python /Users/morali/PycharmProjects/postgressql/client.py 
+               Success
+               Process finished with exit code 0
 
 
 
